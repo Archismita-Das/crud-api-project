@@ -1,165 +1,59 @@
-# CRUD API Project using FastAPI and React
+# CRUD API Project (FastAPI + MySQL + React)
 
-## Overview
-
-This project is a full-stack CRUD (Create, Read, Update, Delete) application developed as part of the Associate Developer Internship task.
-
-The project consists of:
-- FastAPI Backend
-- React Frontend
-- CRUD Operations
-- API Integration
+This is a full-stack CRUD application built using **FastAPI (backend)**, **MySQL (database)**, and **React (frontend)**. The project demonstrates basic REST API development, database connectivity, and frontend-backend integration.
 
 ---
 
-# Technologies Used
+## 🚀 Features
 
-## Backend
-- Python
+- Create, Read, Update, Delete (CRUD) operations for Students
+- FastAPI REST API backend
+- MySQL database connection using SQLAlchemy
+- CORS enabled for frontend integration
+- React frontend for UI (separate folder)
+- API testing using Swagger UI
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend:
 - FastAPI
+- SQLAlchemy
+- PyMySQL
 - Uvicorn
 
-## Frontend
-- React
-- Vite
-- JavaScript
+### Database:
+- MySQL
+
+### Frontend:
+- React (Vite / CRA)
 
 ---
 
-# Features
-
-## CREATE
-Add new student records dynamically.
-
-## READ
-Fetch and display all students from backend API.
-
-## UPDATE
-Update existing student records.
-
-## DELETE
-Delete student records dynamically.
-
----
-
-# Project Structure
-
-```text
+## 📁 Project Structure
 crud-api-project/
 │
 ├── backend/
-│   ├── main.py
-│   ├── requirements.txt
+│ ├── main.py
+│ ├── database.py
+│ └── __pycache__/
 │
 ├── frontend/
-│   ├── src/
-│   ├── package.json
+│ ├── src/
+│ └── public/
 │
-├── README.md
-```
+└── README.md
 
----
 
-# Backend Setup
 
-## Go to backend folder
+👨‍💻 Author
 
-```bash
-cd backend
-```
+Built by Archismita Das
 
-## Install dependencies
+📈 Status
 
-```bash
-pip install fastapi uvicorn
-```
-
-## Run backend server
-
-```bash
-python -m uvicorn main:app --reload
-```
-
-Backend runs on:
-
-```text
-http://127.0.0.1:8000
-```
-
----
-
-# Frontend Setup
-
-## Go to frontend folder
-
-```bash
-cd frontend
-```
-
-## Install dependencies
-
-```bash
-npm install
-```
-
-## Run frontend
-
-```bash
-npm run dev
-```
-
-Frontend runs on:
-
-```text
-http://localhost:5173
-```
-
----
-
-# API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | /students | Fetch all students |
-| POST | /students | Add new student |
-| PUT | /students/{id} | Update student |
-| DELETE | /students/{id} | Delete student |
-
----
-
-# React Concepts Used
-
-- useState
-- useEffect
-- Fetch API
-- Component Rendering
-- State Management
-
----
-
-# FastAPI Concepts Used
-
-- REST APIs
-- CRUD Operations
-- Routing
-- JSON Handling
-- CORS Middleware
-
----
-
-# Learning Outcome
-
-This project helped in understanding:
-- Full-stack development workflow
-- Backend API development
-- Frontend-backend integration
-- CRUD operations
-- React state management
-- API testing and handling
-
----
-
-# Developed By
-
-Archismita Das
-Associate Developer Intern
+✔ Backend working
+✔ MySQL connected
+✔ CRUD API ready
+✔ Frontend integrated
