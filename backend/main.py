@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
+from database import engine
 
 app = FastAPI()
 
@@ -18,7 +20,29 @@ students = []
 # Home Route
 @app.get("/")
 def home():
-    return {"message": "Student CRUD API"}
+    return {
+        "message": "Student CRUD API with MySQL Connection"
+    }
+
+
+# Database Connection Test
+@app.get("/test-db")
+def test_database():
+
+    try:
+        with engine.connect() as connection:
+            connection.execute(text("SELECT 1"))
+
+        return {
+            "status": "success",
+            "message": "MySQL Connected Successfully"
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
 
 
 # CREATE Student
@@ -53,7 +77,9 @@ def update_student(student_id: int, updated_student: dict):
             "students": students
         }
 
-    return {"error": "Student not found"}
+    return {
+        "error": "Student not found"
+    }
 
 
 # DELETE Student
@@ -69,4 +95,6 @@ def delete_student(student_id: int):
             "deleted_student": deleted_student
         }
 
-    return {"error": "Student not found"}
+    return {
+        "error": "Student not found"
+    }
